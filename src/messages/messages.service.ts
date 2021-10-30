@@ -15,6 +15,6 @@ export class MessagesService {
   }
 
   create(content: string) {
-    return this.messagesRepo.crete(content);
+    return this.messagesRepo.create(content);
   }
 }
