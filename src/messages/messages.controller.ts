@@ -11,10 +11,13 @@ import { MessagesService } from './messages.service';
 
 @Controller('messages')
 export class MessagesController {
-  messagesService: MessagesService;
-
-  constructor() {
-    this.messagesService = new MessagesService();
+  constructor(
+    public messagesService: MessagesService,
+    public messagesService2: MessagesService,
+    public messagesService3: MessagesService,
+  ) {
+    console.log(messagesService === messagesService2);
+    console.log(messagesService === messagesService3);
   }
 
   @Get()
